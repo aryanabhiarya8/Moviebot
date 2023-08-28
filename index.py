@@ -1,3 +1,4 @@
+# © https://t.me/
 import os
 from io import BytesIO
 from queue import Queue
@@ -14,13 +15,13 @@ bot = Bot(TOKEN)
 
 
 def welcome(update, context) -> None:
-    update.message.reply_text(f"𝗛𝗘𝗟𝗟𝗢 {update.message.from_user.first_name}, 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝙳𝙰𝚇𝚇 𝙼𝚄𝚂𝙸𝙲 𝙱𝙾𝚃.\n"
-                              f"🔥🔥 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝗬𝗼𝘂𝗿 𝗙𝗮𝘃𝗼𝘂𝗿𝗶𝘁𝗲 𝗠𝗼𝘃𝗶𝗲𝘀 𝗙𝗼𝗿 💯 𝗙𝗿𝗲𝗲 𝗔𝗻𝗱 🍿 𝗘𝗻𝗷𝗼𝘆 𝗶𝘁. 𓆠")
-    update.message.reply_text("𝐄𝐍𝐓𝐄𝐑 𝐘𝐎𝐔𝐑 𝐌𝐎𝐕𝐈𝐄 𝐍𝐀𝐌𝐄 𝐁𝐀𝐁𝐘 ")
+    update.message.reply_text(f"Hello {update.message.from_user.first_name}, Welcome To Shortner Fly Search Bot.\n"
+                              f"🔥 Directly Search From The Bot.")
+    update.message.reply_text("👇 Enter Any Movie or Series Name 👇")
 
 
 def find_movie(update, context):
-    search_results = update.message.reply_text("🔍\n𝗣𝗿𝗼𝗰𝗲𝘀𝘀𝗶𝗻𝗴...........")
+    search_results = update.message.reply_text("Searching...")
     query = update.message.text
     movies_list = search_movies(query)
     if movies_list:
@@ -29,10 +30,9 @@ def find_movie(update, context):
             keyboard = InlineKeyboardButton(movie["title"], callback_data=movie["id"])
             keyboards.append([keyboard])
         reply_markup = InlineKeyboardMarkup(keyboards)
-        search_results.edit_text('𝐒𝐞𝐚𝐫𝐜𝐡 𝐑𝐞𝐬𝐮𝐥𝐭𝐬........', reply_markup=reply_markup)
+        search_results.edit_text('Here Is What I Found...', reply_markup=reply_markup)
     else:
-        search_results.edit_text('ˢᴼᴿᴿʸ ʸᴼᵁᴿ ˢᴱᴬᴿᶜᴴᴵᴺᴳ ᴿᴱˢᵁᴸᵀˢ ᴮᴼᵀ ᶠᴼᵁᴺᴰ ⌕!\nᴘʟᴇᴀꜱᴇ 🙏 ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ & ꜱᴇᴀʀᴄʜ ɴᴏᴡ
-        .')
+        search_results.edit_text('Sorry No Results Are Found')
 
 
 def movie_result(update, context) -> None:
@@ -51,7 +51,6 @@ def movie_result(update, context) -> None:
             query.message.reply_text(text=caption[x:x+4095])
     else:
         query.message.reply_text(text=caption)
-        
 
 
 def setup():
