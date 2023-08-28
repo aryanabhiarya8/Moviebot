@@ -1,4 +1,4 @@
-# © https://t.me/
+# © https://t.me/cyberdaxxx
 import os
 from io import BytesIO
 from queue import Queue
