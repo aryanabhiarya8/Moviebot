@@ -15,7 +15,7 @@ bot = Bot(TOKEN)
 
 
 def welcome(update, context) -> None:
-    update.message.reply_text(f"Hello {update.message.from_user.first_name}, 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝙳𝙰𝚇𝚇 𝙼𝚄𝚂𝙸𝙲 𝙱𝙾𝚃..\n"
+    update.message.reply_text(f"Hello {update.message.from_user.first_name}, 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝙳𝙰𝚇𝚇  𝙱𝙾𝚃..\n"
                               f"🔥🔥 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝗬𝗼𝘂𝗿 𝗙𝗮𝘃𝗼𝘂𝗿𝗶𝘁𝗲 𝗠𝗼𝘃𝗶𝗲𝘀 𝗙𝗼𝗿 💯 𝗙𝗿𝗲𝗲 𝗔𝗻𝗱 🍿 𝗘𝗻𝗷𝗼𝘆 𝗶𝘁. 𓆠")
     update.message.reply_text("👇 𝐄𝐍𝐓𝐄𝐑 𝐘𝐎𝐔𝐑 𝐌𝐎𝐕𝐈𝐄 𝐍𝐀𝐌𝐄 𝐁𝐀𝐁𝐘 👇")
 
