@@ -31,7 +31,8 @@ def find_movie(update, context):
         reply_markup = InlineKeyboardMarkup(keyboards)
         search_results.edit_text('𝐒𝐞𝐚𝐫𝐜𝐡 𝐑𝐞𝐬𝐮𝐥𝐭𝐬........', reply_markup=reply_markup)
     else:
-        search_results.edit_text('Sorry 🙏, No Result Found!\nCheck If You Have Misspelled The Movie Name.')
+        search_results.edit_text('ˢᴼᴿᴿʸ ʸᴼᵁᴿ ˢᴱᴬᴿᶜᴴᴵᴺᴳ ᴿᴱˢᵁᴸᵀˢ ᴮᴼᵀ ᶠᴼᵁᴺᴰ ⌕!\nᴘʟᴇᴀꜱᴇ 🙏 ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ & ꜱᴇᴀʀᴄʜ ɴᴏᴡ
+        .')
 
 
 def movie_result(update, context) -> None:
